@@ -33,7 +33,7 @@ def run_visual_simulation():
     visualiser.close()
 
 def main():
-    MODE = 2  # 1 = visual, 2 = batch run
+    MODE = 1  # 1 = visual, 2 = batch run
 
     if MODE == 1:
         run_visual_simulation()

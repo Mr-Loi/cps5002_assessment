@@ -1,16 +1,16 @@
 import random
 
-# enumeration
-EMPTY, WILDLIFE, PREDATOR, SYNTHETIC, BOSS, OBSTACLE = range(6)
+# adds entities to graph
+EMPTY, WILDLIFE, PREDATOR, SYNTHETIC, BOSS, OBSTACLE, CLAN_PREDATOR = range(7)
 
-# sets grid environment
+# setter
 class Environment:
     def __init__(self, width, height):
         self.width = width
         self.height = height
         self.grid = [[EMPTY for _ in range(width)] for _ in range(height)]
 
-    # wrapping around edges
+    # wraps around edges
     def wrap(self, x, y):
         return x % self.width, y % self.height
 
@@ -23,3 +23,7 @@ class Environment:
             if self.grid[y][x] == EMPTY:
                 self.grid[y][x] = entity
                 placed += 1
+
+    def populate(self, num_wildlife=30, num_obstacles=25):
+        self.place_random(WILDLIFE, num_wildlife)
+        self.place_random(OBSTACLE, num_obstacles)
