@@ -1,0 +1,18 @@
+# for visuals
+GRID_WIDTH = 20
+GRID_HEIGHT = 20
+
+NUM_WILDLIFE = 30
+NUM_OBSTACLES = 25
+
+# for simulation running
+NUM_SIMULATION_STEPS = 500
+NUM_RUNS = 20
+
+# dek hp/stamina
+INITIAL_HEALTH = 100
+INITIAL_STAMINA = 100
+
+# boss health
+BOSS_HEALTH = 500
+BOSS_TERRITORY = 3
